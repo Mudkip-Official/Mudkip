@@ -1,0 +1,43 @@
+{
+    "name": "mudkip",
+    "version": "0.1.1",
+    "description": "Mudkip is a headless form for React with ultimate type-safety and unparalleled developer experience and ease-of-use",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "install": "npm i && cd ./dev && npm i",
+        "dev": "concurrently \"npm:devBuild\" \"npm:devServe\"",
+        "devServe": "cd ./dev && npm run dev",
+        "devBuild": "tsup --watch --dts",
+        "build": "tsup",
+        "lint": "tsc && eslint . --ignore-pattern \"/dev/lib/\"  --ignore-pattern \"/dist/\"",
+        "lintFix": "eslint . --ignore-pattern \"/dev/lib/\"  --ignore-pattern \"/dist/\""
+    },
+    "keywords": [
+        "form",
+        "react",
+        "headless",
+        "ui",
+        "nextjs",
+        "tailwind",
+        "typescript",
+        "zod"
+    ],
+    "author": "Jacob Leger",
+    "license": "MIT",
+    "devDependencies": {
+        "@changesets/cli": "^2.26.2",
+        "@types/react": "^18.2.17",
+        "concurrently": "^8.2.0",
+        "tsup": "^7.1.0",
+        "typescript": "^5.1.6"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0"
+    },
+    "dependencies": {
+        "@radix-ui/react-form": "^0.0.3",
+        "clsx": "^2.0.0"
+    }
+}
