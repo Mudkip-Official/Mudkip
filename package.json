@@ -6,7 +6,7 @@
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
     "scripts": {
-        "install": "npm i && cd ./dev && npm i",
+        "devInstall": "npm i && cd ./dev && npm i",
         "dev": "concurrently \"npm:devBuild\" \"npm:devServe\"",
         "devServe": "cd ./dev && npm run dev",
         "devBuild": "tsup --watch --dts",
