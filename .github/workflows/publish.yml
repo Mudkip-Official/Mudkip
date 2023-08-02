@@ -1,13 +1,11 @@
 name: Publish
+
 on:
     push:
         branches:
             - "main"
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
-
-env:
-    NPM_VERSION_NUMBER: 0.1.1
 
 jobs:
     build:
@@ -23,7 +21,7 @@ jobs:
 
             - name: Install deps
               run: npm ci
-              
+
             - name: Build package
               run: npm run build
 
@@ -39,7 +37,7 @@ jobs:
               id: changesets
               uses: changesets/action@v1
               with:
-                  publish: npm version ${{ env.NPM_VERSION_NUMBER }} && npm publish
+                  publish: npm publish
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
