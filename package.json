@@ -20,8 +20,8 @@
         "build": "tsup",
         "lint": "npm run lintTsc && npm run lintEslint",
         "lintTsc": "tsc",
-        "lintEslint": "eslint . --ignore-pattern \"/dev/lib/\"  --ignore-pattern \"/dist/\"",
-        "fixEslint": "eslint . --ignore-pattern \"/dev/lib/\"  --ignore-pattern \"/dist/\"",
+        "lintEslint": "eslint .--ignore-pattern \"dist/\"",
+        "fixEslint": "eslint . --ignore-pattern \"dist/\" --fix",
         "dev": "storybook dev -p 3000",
         "build-storybook": "storybook build"
     },
@@ -46,6 +46,7 @@
         "@storybook/addon-essentials": "^7.2.1",
         "@storybook/addon-interactions": "^7.2.1",
         "@storybook/addon-links": "^7.2.1",
+        "@storybook/addon-mdx-gfm": "^7.2.1",
         "@storybook/addon-onboarding": "^1.0.8",
         "@storybook/blocks": "^7.2.1",
         "@storybook/react": "^7.2.1",
@@ -56,6 +57,7 @@
         "concurrently": "^8.2.0",
         "eslint": "^8.46.0",
         "eslint-plugin-react": "^7.33.1",
+        "eslint-plugin-storybook": "^0.6.13",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "storybook": "^7.2.1",
@@ -67,6 +69,8 @@
     },
     "dependencies": {
         "@radix-ui/react-form": "^0.0.3",
+        "@storybook/addon-a11y": "^7.2.1",
+        "@storybook/addon-viewport": "^7.2.1",
         "clsx": "^2.0.0"
     }
 }
