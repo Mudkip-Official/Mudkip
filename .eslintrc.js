@@ -27,7 +27,7 @@ module.exports = {
 	},
 	plugins: ["@typescript-eslint", "react"],
 	rules: {
-		indent: ["error", "tab"],
+		indent: ["error", 4, {}],
 		quotes: ["error", "double"],
 		semi: ["error", "always"],
 		"react/prop-types": "off",

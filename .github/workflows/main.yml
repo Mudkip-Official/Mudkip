@@ -1,23 +1,23 @@
 name: Main CI
 on:
-    push:
-        branches:
-            - "**"
+	push:
+		branches:
+			- "**"
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: 16.x
+	build:
+		runs-on: ubuntu-latest
+		steps:
+			- uses: actions/checkout@v3
+			- uses: actions/setup-node@v3
+			  with:
+				  node-version: 16.x
 
-            - name: Install deps
-              run: npm ci
+			- name: Install deps
+			  run: npm ci
 
-            - name: Lint
-              run: npm run lint
+			- name: Lint
+			  run: npm run lint
 
-            - name: Build
-              run: npm run build
+			- name: Build
+			  run: npm run build
