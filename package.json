@@ -2,6 +2,16 @@
     "name": "mudkip",
     "version": "0.1.1",
     "description": "Mudkip is a headless form for React with ultimate type-safety and unparalleled developer experience and ease-of-use",
+    "repository": {
+        "url": "github:mudkip-official/mudkip",
+        "type": ""
+    },
+    "url": "https://github.com/mudkip-official/mudkip/",
+    "homepage": "https://github.com/mudkip-official/mudkip/",
+    "bugs": {
+        "url": "https://github.com/mudkip-official/mudkip/issues",
+        "email": "jacobaleger12@gmail.com"
+    },
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
@@ -26,7 +36,11 @@
         "typescript",
         "zod"
     ],
-    "author": "Jacob Leger",
+    "author": {
+        "name": "Jacob Leger",
+        "email": "jacobaleger12@gmail.com",
+        "url": "https://github.com/leiloukou"
+    },
     "license": "MIT",
     "devDependencies": {
         "@changesets/cli": "^2.26.2",
@@ -35,6 +49,7 @@
         "concurrently": "^8.2.0",
         "eslint": "^8.46.0",
         "eslint-plugin-react": "^7.33.1",
+        "react": "^18.2.0",
         "tsup": "^7.1.0",
         "typescript": "^5.1.6"
     },
