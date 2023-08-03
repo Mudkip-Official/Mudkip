@@ -8,7 +8,7 @@
     "scripts": {
         "devInstall": "npm i && cd ./dev && npm i",
         "dev": "concurrently \"npm:devBuild\" \"npm:devServe\"",
-        "devServe": "cd ./dev && npm run dev",
+        "devServe": "",
         "devBuild": "tsup --watch --dts",
         "build": "tsup",
         "lint": "npm run lintTsc && npm run lintEslint",

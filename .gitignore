@@ -1,27 +1,2 @@
 node_modules
 dist
-lib
-
-dev/logs
-dev/*.log
-dev/npm-debug.log*
-dev/yarn-debug.log*
-dev/yarn-error.log*
-dev/pnpm-debug.log*
-dev/lerna-debug.log*
-
-dev/node_modules
-dev/dist
-dev/dist-ssr
-dev/*.local
-
-dev/# Editor directories and files
-dev/.vscode/*
-dev/!.vscode/extensions.json
-dev/.idea
-dev/.DS_Store
-dev/*.suo
-dev/*.ntvs*
-dev/*.njsproj
-dev/*.sln
-dev/*.sw?
