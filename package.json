@@ -11,8 +11,10 @@
         "devServe": "cd ./dev && npm run dev",
         "devBuild": "tsup --watch --dts",
         "build": "tsup",
-        "lint": "tsc && eslint . --ignore-pattern \"/dev/lib/\"  --ignore-pattern \"/dist/\"",
-        "lintFix": "eslint . --ignore-pattern \"/dev/lib/\"  --ignore-pattern \"/dist/\""
+        "lint": "npm run lintTsc && npm run lintEslint",
+        "lintTsc": "tsc",
+        "lintEslint": "eslint . --ignore-pattern \"/dev/lib/\"  --ignore-pattern \"/dist/\"",
+        "fixEslint": "eslint . --ignore-pattern \"/dev/lib/\"  --ignore-pattern \"/dist/\""
     },
     "keywords": [
         "form",
