@@ -2,6 +2,9 @@ import * as React from "react";
 import * as RadixForm from "@radix-ui/react-form";
 import clsx, { ClassValue } from "clsx";
 
+// * General Types *
+type Value = React.ComponentProps<typeof RadixForm.Control>["value"];
+
 // * Fields *
 interface FormField {
     id?: string;
@@ -34,8 +37,10 @@ interface InputProps
             "id" | "className"
         >,
         FormField {
-    value: unknown;
-    setValue: (newValue: unknown) => void;
+    value: Value;
+    setValue: (
+        newValue: Value
+    ) => void;
 }
 
 /**
@@ -74,6 +79,7 @@ const Input: React.FC<InputProps> = ({
             <RadixForm.Control
                 type={type}
                 onChange={(e) => setValue(e.target.value)}
+                value={value}
             />
             {messages.map(({ text, messageMatch }) => (
                 <RadixForm.Message
@@ -95,7 +101,7 @@ interface withFieldNamesAsKeys<FieldValueType> {
     [name: string | number]: FieldValueType;
 }
 
-type FieldValues = withFieldNamesAsKeys<unknown>;
+type FieldValues = withFieldNamesAsKeys<Value>;
 
 const Form: React.FC<FormProps> = ({
     fields,
