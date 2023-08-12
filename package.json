@@ -3,8 +3,8 @@
   "version": "0.0.0-development",
   "description": "Mudkip is a headless form for React with ultimate type-safety and unparalleled developer experience and ease-of-use",
   "repository": {
-    "url": "https://github.com/mudkip-official/mudkip",
-    "type": ""
+    "url": "https://github.com/mudkip-official/mudkip.git",
+    "type": "git"
   },
   "private": "false",
   "url": "https://github.com/mudkip-official/mudkip/",
