@@ -1,76 +1,94 @@
 {
-    "name": "mudkip",
-    "version": "0.1.1",
-    "description": "Mudkip is a headless form for React with ultimate type-safety and unparalleled developer experience and ease-of-use",
-    "repository": {
-        "url": "github:mudkip-official/mudkip",
-        "type": ""
-    },
-    "url": "https://github.com/mudkip-official/mudkip/",
-    "homepage": "https://github.com/mudkip-official/mudkip/",
-    "bugs": {
-        "url": "https://github.com/mudkip-official/mudkip/issues",
-        "email": "jacobaleger12@gmail.com"
-    },
-    "main": "dist/index.js",
-    "module": "dist/index.mjs",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "devInstall": "npm i && cd ./dev && npm i",
-        "build": "tsup",
-        "lint": "npm run lintTsc && npm run lintEslint",
-        "lintTsc": "tsc",
-        "lintEslint": "eslint .--ignore-pattern \"dist/\"",
-        "fixEslint": "eslint . --ignore-pattern \"dist/\" --fix",
-        "dev": "storybook dev -p 3000",
-        "build-storybook": "storybook build"
-    },
-    "keywords": [
-        "form",
-        "react",
-        "headless",
-        "ui",
-        "nextjs",
-        "tailwind",
-        "typescript",
-        "zod"
-    ],
-    "author": {
-        "name": "Jacob Leger",
-        "email": "jacobaleger12@gmail.com",
-        "url": "https://github.com/leiloukou"
-    },
-    "license": "MIT",
-    "devDependencies": {
-        "@changesets/cli": "^2.26.2",
-        "@storybook/addon-essentials": "^7.2.1",
-        "@storybook/addon-interactions": "^7.2.1",
-        "@storybook/addon-links": "^7.2.1",
-        "@storybook/addon-mdx-gfm": "^7.2.1",
-        "@storybook/addon-onboarding": "^1.0.8",
-        "@storybook/blocks": "^7.2.1",
-        "@storybook/react": "^7.2.1",
-        "@storybook/react-vite": "^7.2.1",
-        "@storybook/testing-library": "^0.2.0",
-        "@types/react": "^18.2.17",
-        "@typescript-eslint/eslint-plugin": "^6.2.1",
-        "concurrently": "^8.2.0",
-        "eslint": "^8.46.0",
-        "eslint-plugin-react": "^7.33.1",
-        "eslint-plugin-storybook": "^0.6.13",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "storybook": "^7.2.1",
-        "tsup": "^7.1.0",
-        "typescript": "^5.1.6"
-    },
-    "peerDependencies": {
-        "react": "^18.2.0"
-    },
-    "dependencies": {
-        "@radix-ui/react-form": "^0.0.3",
-        "@storybook/addon-a11y": "^7.2.1",
-        "@storybook/addon-viewport": "^7.2.1",
-        "clsx": "^2.0.0"
-    }
+  "name": "mudkip",
+  "version": "0.0.0-development",
+  "description": "Mudkip is a headless form for React with ultimate type-safety and unparalleled developer experience and ease-of-use",
+  "repository": {
+    "url": "https://github.com/mudkip-official/mudkip",
+    "type": ""
+  },
+  "private": "false",
+  "url": "https://github.com/mudkip-official/mudkip/",
+  "homepage": "https://github.com/mudkip-official/mudkip/",
+  "bugs": {
+    "url": "https://github.com/mudkip-official/mudkip/issues",
+    "email": "jacobaleger12@gmail.com"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "devInstall": "npm i && cd ./dev && npm i",
+    "build": "tsup",
+    "lint": "npm run lintTsc && npm run lintEslint",
+    "lintTsc": "tsc",
+    "lintEslint": "eslint . --ignore-pattern \"dist/\"",
+    "fixEslint": "eslint . --ignore-pattern \"dist/\" --fix",
+    "dev": "storybook dev -p 3000",
+    "build-storybook": "storybook build",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [
+    "form",
+    "react",
+    "headless",
+    "ui",
+    "nextjs",
+    "tailwind",
+    "typescript",
+    "zod"
+  ],
+  "author": {
+    "name": "Jacob Leger",
+    "email": "jacobaleger12@gmail.com",
+    "url": "https://github.com/leiloukou"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.2.1",
+    "@storybook/addon-interactions": "^7.2.1",
+    "@storybook/addon-links": "^7.2.1",
+    "@storybook/addon-mdx-gfm": "^7.2.1",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.2.1",
+    "@storybook/react": "^7.2.1",
+    "@storybook/react-vite": "^7.2.1",
+    "@storybook/testing-library": "^0.2.0",
+    "@types/react": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "eslint": "^8.46.0",
+    "eslint-plugin-react": "^7.33.1",
+    "eslint-plugin-storybook": "^0.6.13",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.2.1",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6",
+    "semantic-release": "^21.0.7"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-form": "^0.0.3",
+    "@storybook/addon-a11y": "^7.2.1",
+    "@storybook/addon-viewport": "^7.2.1",
+    "clsx": "^2.0.0"
+  },
+  "release": {
+    "branches": [
+      "main",
+      "next",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
