@@ -27,4 +27,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          SEMANTIC_RELEASE_INCLUDE_AUTH_TOKEN: false
         run: npx semantic-release -r "github.com/mudkip-official/mudkip.git"
