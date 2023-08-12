@@ -6,14 +6,18 @@ const config: StorybookConfig = {
         "@storybook/addon-viewport",
         "@storybook/addon-links",
         "@storybook/addon-essentials",
-        "@storybook/addon-onboarding",
         "@storybook/addon-interactions",
         "@storybook/addon-mdx-gfm",
         "@storybook/addon-a11y",
     ],
+    // reactOptions: {
+    //     fastRefresh: true,
+    // },
     framework: {
         name: "@storybook/react-vite",
-        options: {},
+        options: {
+            strictMode: true,
+        },
     },
     docs: {
         autodocs: "tag",

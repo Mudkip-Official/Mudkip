@@ -11,7 +11,13 @@ export default {
 export const Newsletter: StoryFn<typeof Form> = (args) => <Form {...args} />;
 
 Newsletter.args = {
-    fields:[ {
-        name: "email",
-    },]
+    fields: [
+        {
+            name: "email",
+            type: "email",
+        },
+    ],
+    onSubmit: (e, formValues) => {
+        console.log({ e, formValues });
+    },
 };
