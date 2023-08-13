@@ -1,11 +1,13 @@
 name: Release
+
 on:
   push:
     branches:
       - main
-      - next
+      # - next
       - beta
       - alpha
+
 jobs:
   release:
     name: Release
@@ -17,6 +19,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+
       - name: Install dependencies
         run: npm ci
       - name: Lint
@@ -28,6 +31,8 @@ jobs:
         run: |
           echo "include-auth-token = false" > .gitconfig.semantic-release
           git config --global include.path .gitconfig.semantic-release
+          export GITHUB_HOST=github.com
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
