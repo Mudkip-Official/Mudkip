@@ -26,7 +26,6 @@ jobs:
         run: npm run lint
       - name: Build
         run: npm run build
-
       - name: Set up git config
         run: |
           echo "include-auth-token = false" > .gitconfig.semantic-release
