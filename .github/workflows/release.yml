@@ -1,43 +1,43 @@
 name: Release
 
 on:
-  push:
-    branches:
-      - main
-      - next
-      - beta
-      - alpha
+	push:
+		branches:
+			- main
+			- next
+			- beta
+			- alpha
 
 jobs:
-  release:
-    name: Release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-					
-      - name: Install deps
-        run: npm ci
+	release:
+		name: Release
+		runs-on: ubuntu-latest
+		steps:
+			- name: Checkout
+				uses: actions/checkout@v3
+			- name: Setup Node
+				uses: actions/setup-node@v3
+				with:
+					node-version: 18
 
-      - name: Lint
-        run: npm run lint
+			- name: Install deps
+				run: npm ci
 
-      - name: Build
-        run: npm run build
+			- name: Lint
+				run: npm run lint
 
-      # - name: Set up Git Config
-      #   run: |
-      #     echo "include-auth-token = false" > .gitconfig.semantic-release
-      #     git config --global include.path .gitconfig.semantic-release
-        
-        - name: Release
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-            GITHUB_HOST: github.com
-            SEMANTIC_RELEASE_INCLUDE_AUTH_TOKEN: false
-        run: npx semantic-release -r "github.com/mudkip-official/mudkip.git"
+			- name: Build
+				run: npm run build
+
+			# - name: Set up Git Config
+			#   run: |
+			#     echo "include-auth-token = false" > .gitconfig.semantic-release
+			#     git config --global include.path .gitconfig.semantic-release
+				
+				- name: Release
+					env:
+						GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+						NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+						GITHUB_HOST: github.com
+						SEMANTIC_RELEASE_INCLUDE_AUTH_TOKEN: false
+				run: npx semantic-release -r "github.com/mudkip-official/mudkip.git"
