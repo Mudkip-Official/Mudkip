@@ -20,10 +20,12 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
+      - name: Install deps
         run: npm ci
+        
       - name: Lint
         run: npm run lint
+
       - name: Build
         run: npm run build
 
@@ -31,7 +33,7 @@ jobs:
         run: |
           echo "include-auth-token = false" > .gitconfig.semantic-release
           git config --global include.path .gitconfig.semantic-release
-          
+  
         
         - name: Release
           env:
